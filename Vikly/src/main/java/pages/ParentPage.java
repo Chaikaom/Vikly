@@ -13,5 +13,6 @@ public class ParentPage {
     public ParentPage(WebDriver webDriver) {
         this.webDriver = webDriver;
         actionWithOurElements = new ActionWithOurElements(webDriver);
+        PageFactory.initElements(webDriver, this);
     }
 }

@@ -31,12 +31,12 @@ public class ActionWithOurElements {
         }
     }
 
-    public void clickOnElement(WebElement webElement) {
+    public void clickOnElement(WebElement webElement){
         try {
             webDriverWait15.until(ExpectedConditions.elementToBeClickable(webElement));
             webElement.click();
-            logger.info("Element was clicked");
-        } catch (Exception e) {
+          logger.info("Element was clicked");
+        }catch  (Exception e) {
             printErroeStopTest();
         }
     }

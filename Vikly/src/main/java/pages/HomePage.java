@@ -2,17 +2,15 @@ package pages;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 public class HomePage extends ParentPage {
-    @FindBy(xpath = "//*[@id=\"container\"]/div/div/div/div[6]/ul/li[1]/a")
+    @FindBy(css = "#container > div > div > div > div.h-page__navigation.basic-white-blank > ul > li.nav-item.js-gtm-nav-item-overview > a")
     private WebElement opisanie;
     @FindBy(xpath = "//*[@id=\"container\"]/div/div/div/div[7]/div[3]/div[1]/div/div/ul/li[2]/a")
     private WebElement udobstva;
@@ -50,5 +48,4 @@ public class HomePage extends ParentPage {
     public void click5() {
         actionWithOurElements.clickOnElement(otzyvy);
     }
-
 }
