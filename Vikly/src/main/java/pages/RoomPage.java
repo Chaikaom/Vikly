@@ -29,9 +29,10 @@ public class RoomPage extends ParentPage {
     private WebElement firstbaby;
     @FindBy(xpath = "//*[@id=\"container\"]/div/div/div/div[5]/form/div[1]/div[3]/div[3]/div[2]/div/div[1]/div/div[2]/div[2]/div[2]/select[2]/option[12]")
     private WebElement secondbaby;
-    @FindBy(xpath ="//*[@id=\"hotel-608662\"]/div[3]/div[2]/div/div/div/div[2]/div[4]/div[4]/button")
+    @FindBy(xpath = "//*[@id=\"hotellist_inner\"]/div[1]/div[2]/div[3]/div/table/tfoot/tr[2]/td/div/a/span")
     private WebElement bron;
-
+//    @FindBy(xpath = "//*[@id=\"hcta\"]/span[1]")
+//    private WebElement zabron;
 
     public RoomPage(WebDriver webDriver){
         super(webDriver);
@@ -70,9 +71,7 @@ public class RoomPage extends ParentPage {
     public void clickSecondbaby(){
         actionWithOurElements.clickOnElement(secondbaby);
     }
-    public void clickBron() throws InterruptedException{
-        Thread.sleep(2000);
+    public void clickBron() {
         actionWithOurElements.clickOnElement(bron);
     }
-
 }

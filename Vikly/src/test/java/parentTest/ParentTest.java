@@ -4,6 +4,7 @@ import io.qameta.allure.Step;
 import libs.ConfigProperties;
 import org.aeonbits.owner.ConfigFactory;
 import org.apache.log4j.Logger;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
@@ -34,7 +35,7 @@ public class ParentTest {
         webDriver = new ChromeDriver();
         webDriver.manage().deleteAllCookies();
         webDriver.manage().window().maximize();
-        webDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 
       homePage = new HomePage(webDriver);
       screenPage =new ScreenPage(webDriver);
@@ -42,10 +43,10 @@ public class ParentTest {
 
     }
 
-//    @After
-//    public void tearDown() {
-//        webDriver.quit();
-//    }
+    @After
+    public void tearDown() {
+        webDriver.quit();
+    }
 
     @Step
     protected void checkAC(String message, boolean actual, boolean expected) {
