@@ -23,6 +23,6 @@ public class RoomTest extends ParentTest {
         roomPage.clickBron();
         windowsPage.SwitchWindows1();
         roomPage.clickZabron();
-        screenPage.TakeScreen1();
+        screenPage.TakeScreen();
     }
 }

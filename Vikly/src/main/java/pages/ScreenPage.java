@@ -19,13 +19,4 @@ public class ScreenPage extends ParentPage{
         String path = "./target/screenshots/" + screenshot.getName();
         FileUtils.copyFile(screenshot, new File(path));
     }
-    public void TakeScreen1 () throws InterruptedException, IOException {
-        Thread.sleep(2000);
-        File screenshot = ((TakesScreenshot) webDriver).
-                getScreenshotAs(OutputType.FILE);
-        String path = "./target/screenshots/" + screenshot.getName();
-        FileUtils.copyFile(screenshot, new File(path));
-    }
-
-
 }
