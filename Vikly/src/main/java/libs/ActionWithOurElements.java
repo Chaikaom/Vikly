@@ -17,12 +17,12 @@ public class ActionWithOurElements {
     WebDriver webDriver;
    Logger logger;
     WebDriverWait webDriverWait15;
-    Action action;
 
     public ActionWithOurElements(WebDriver webDriver) {
         this.webDriver = webDriver;
         logger = Logger.getLogger(getClass());
         webDriverWait15 = new WebDriverWait(webDriver, 15);
+
     }
 
     public void clickOnElement(WebElement webElement){

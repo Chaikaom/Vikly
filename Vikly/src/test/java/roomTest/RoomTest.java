@@ -21,7 +21,10 @@ public class RoomTest extends ParentTest {
         roomPage.clickFirstbaby();
         roomPage.clickSecondbaby();
         roomPage.clickPosmotret();
+        windowsPage.SwitchWindows();
         roomPage.clickBron();
+        windowsPage.SwitchWindows1();
+        roomPage.clickZabron();
         screenPage.TakeScreen1();
     }
 }
