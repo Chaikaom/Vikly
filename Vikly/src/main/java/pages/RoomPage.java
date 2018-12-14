@@ -1,6 +1,4 @@
 package pages;
-
-import org.apache.poi.ss.formula.functions.T;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,8 +9,6 @@ public class RoomPage extends ParentPage {
     private WebElement zaezd;
     @FindBy(xpath = "//*[@id=\"container\"]/div/div/div/div[5]/form/div[2]/div[2]/table[2]/tbody/tr[4]/td[4]/div")
     private WebElement datazaezda;
-    @FindBy(xpath = "//*[@id=\"container\"]/div/div/div/div[5]/form/div[1]/div[3]/div[2]/div/span/span[2]")
-    private WebElement vyezd;
     @FindBy(xpath = "//*[@id=\"container\"]/div/div/div/div[5]/form/div[2]/div[2]/table[2]/tbody/tr[4]/td[5]/div")
     private WebElement datavyezda;
     @FindBy(css = "#container > div > div > div > div.h-page__check-avail > form > div.check-form-wrapper.clearfix > div.get-price > div > div._btn-check-wrapper > button.basic-btn.__btn-check.hide-tablet.js-change.js-check-avail-pop.js-get-price-btn.js-gtm-check-avail-btn")
@@ -43,9 +39,6 @@ public class RoomPage extends ParentPage {
     }
     public void clickDataZaezd() {
         actionWithOurElements.clickOnElement(datazaezda);
-    }
-    public void clickVyezd() {
-        actionWithOurElements.clickOnElement(vyezd);
     }
     public void clickDataVyezda() {
         actionWithOurElements.clickOnElement(datavyezda);

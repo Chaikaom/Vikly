@@ -1,13 +1,8 @@
 package pages;
 
-import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.List;
 
 public class HomePage extends ParentPage {
     @FindBy(css = "#container > div > div > div > div.h-page__navigation.basic-white-blank > ul > li.nav-item.js-gtm-nav-item-overview > a")
@@ -36,9 +31,7 @@ public class HomePage extends ParentPage {
     public void click1() {
         actionWithOurElements.clickOnElement(opisanie);
     }
-    public void click2() {
-        actionWithOurElements.clickOnElement(udobstva);
-    }
+    public void click2() { actionWithOurElements.clickOnElement(udobstva); }
     public void click3() {
         actionWithOurElements.clickOnElement(nomera);
     }
