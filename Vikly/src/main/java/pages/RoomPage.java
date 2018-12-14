@@ -65,11 +65,10 @@ public class RoomPage extends ParentPage {
         actionWithOurElements.clickOnElement(secondbaby);
     }
     public void clickBron() throws InterruptedException{
-        Thread.sleep(8000);
+        Thread.sleep(2000);
         actionWithOurElements.clickOnElement(bron);
     }
-    public void clickZabron() throws InterruptedException{
-        Thread.sleep(3000);
+    public void clickZabron() {
         actionWithOurElements.clickOnElement(zabron);
     }
 }
