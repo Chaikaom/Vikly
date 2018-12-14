@@ -1,9 +1,7 @@
 package homeTest;
 
 import org.junit.Test;
-import pages.HomePage;
 import parentTest.ParentTest;
-
 import java.io.IOException;
 
 public class HomeTest extends ParentTest {

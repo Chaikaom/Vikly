@@ -8,12 +8,8 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import pages.*;
-import sun.security.krb5.Config;
-
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
@@ -22,6 +18,7 @@ public class ParentTest {
     protected HomePage homePage;
     protected ScreenPage screenPage;
     protected RoomPage roomPage;
+    protected WindowsPage windowsPage;
 
     Logger logger = Logger.getLogger(getClass());
 
@@ -40,14 +37,12 @@ public class ParentTest {
       homePage = new HomePage(webDriver);
       screenPage =new ScreenPage(webDriver);
       roomPage = new RoomPage(webDriver);
-
+      windowsPage = new WindowsPage(webDriver);
     }
-
     @After
     public void tearDown() {
         webDriver.quit();
     }
-
     @Step
     protected void checkAC(String message, boolean actual, boolean expected) {
         if (!(actual == expected)) {
@@ -55,5 +50,4 @@ public class ParentTest {
         }
         Assert.assertEquals(message, expected, actual);
     }
-
 }

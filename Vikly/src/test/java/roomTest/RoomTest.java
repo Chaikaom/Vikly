@@ -2,11 +2,9 @@ package roomTest;
 
 import org.junit.Test;
 import parentTest.ParentTest;
-
 import java.io.IOException;
 
 public class RoomTest extends ParentTest {
-
     @Test
     public void Zakaz() throws InterruptedException, IOException {
         homePage.openPage();
